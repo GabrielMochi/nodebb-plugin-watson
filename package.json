@@ -1,0 +1,52 @@
+{
+  "name": "nodebb-plugin-watson",
+  "version": "1.0.0",
+  "description": "NodeBB Plugin that allows users to get response from a virtual assistant using Watson (IBM)",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmochi56/nodebb-plugin-watson.git"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "watson",
+    "conversation",
+    "virtual",
+    "assistant",
+    "response"
+  ],
+  "author": {
+    "name": "Gabriel Mochi Ribeiro",
+    "email": "gmochi56@icloud.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gmochi56/nodebb-plugin-watson/issues"
+  },
+  "nbbpm": {
+    "compatibility": "^1.1.0"
+  },
+  "homepage": "https://github.com/gmochi56/nodebb-plugin-watson#readme",
+  "_id": "nodebb-plugin-watson@1.0.0",
+  "_from": "nodebb-plugin-mentions@1.0.0",
+  "_npmVersion": "2.14.12",
+  "_nodeVersion": "4.2.4",
+  "maintainers": [
+    {
+      "name": "Gabriel Mochi Ribeiro",
+      "email": "gmochi56@icloud.com"
+    },
+    {
+      "name": "Davi Moraes Couto",
+      "email": "davimcouto92@hotmail.com"
+    }
+  ],
+  "readme": "ERROR: No README data found!",
+  "dependencies": {
+    "watson-developer-cloud": "^2.14.4"
+  }
+}
