@@ -2,11 +2,11 @@
 
 //  Requirements
 var User = module.parent.require('./user'),
-    winston = module.parent.require('winston'),
-    watsonDev = require('watson-developer-cloud'),
+var winston = module.parent.require('winston'),
+var watsonDev = require('watson-developer-cloud');
 
 //  Methods
-    Watson = {};
+var Watson = {};
 
 Watson.response = function(postData) {
   var conversation = watsonDev.conversation({
@@ -14,20 +14,22 @@ Watson.response = function(postData) {
     password: 'xUtHqarwWpUk',
     version: 'v1',
     version_date: '2016-09-20'
-  }),
-      context = {},
-      params = {
-        workspace_id: '25dfa8a0-0263-471b-8980-317e68c30488',
-        input: {'text': 'hahaha'},
-        context: context
-      };
+  });
+
+  var context = {};
+
+  var params = {
+    workspace_id: 'a05393b7-d022-4bed-ba76-012042930893',
+    input: {'text': 'hahaha'},
+    context: context
+  };
 
   conversation.message(params, function
     (err, response) {
     if (err)
-      return winston.error(err);
+      return console.log(err);
     else
-      winston.log(JSON.stringify(response, null, 2));
+      console.log(JSON.stringify(response, null, 2));
   });
 }
 
