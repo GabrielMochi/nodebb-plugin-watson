@@ -1,8 +1,7 @@
 'use strict';
 
 //  Requirements
-var User = module.parent.require('./user'),
-var winston = module.parent.require('winston'),
+var winston = module.parent.require('winston');
 var watsonDev = require('watson-developer-cloud');
 
 //  Methods
@@ -20,16 +19,16 @@ Watson.response = function(postData) {
 
   var params = {
     workspace_id: 'a05393b7-d022-4bed-ba76-012042930893',
-    input: {'text': 'hahahaha'},
+    input: {'text': 'hahaha'},
     context: context
   };
 
-  conversation.message(params, function
-    (err, response) {
+  conversation.message(params, function(err, response) {
     if (err)
-      return console.log(err);
-    else
-      console.log(JSON.stringify(response, null, 2));
+      return winston.info(err);
+    else {
+      winston.info(JSON.stringify(response, null, 2));
+    }
   });
 }
 
