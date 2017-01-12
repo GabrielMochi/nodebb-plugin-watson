@@ -2,7 +2,7 @@
 	"id": "nodebb-plugin-watson",
 	"name": "Watson Response",
 	"description": "NodeBB Plugin that allows users to get response from a virtual assistant using Watson (IBM)",
-	"url": "https://github.com/julianlam/nodebb-plugin-mentions",
+	"url": "https://github.com/gmochi56/nodebb-plugin-watson",
 	"library": "./library.js",
 	"hooks": [
 		{ "hook": "action:post.save", "method": "response" }
