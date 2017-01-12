@@ -20,7 +20,7 @@ Watson.response = function(postData) {
 
   var params = {
     workspace_id: 'a05393b7-d022-4bed-ba76-012042930893',
-    input: {'text': 'hahaha'},
+    input: {'text': 'hahahaha'},
     context: context
   };
 
