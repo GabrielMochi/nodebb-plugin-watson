@@ -3,6 +3,7 @@
 //  Requirements
 var winston = module.parent.require('winston');
 var watsonDev = module.parent.require('watson-developer-cloud');
+var Posts = module.parent.require('./posts');
 
 //  Methods
 var Watson = {};
@@ -28,6 +29,14 @@ Watson.response = function(postData) {
       return winston.info(err);
     else {
       winston.info(JSON.stringify(response, null, 2));
+      Posts.setPostFields(postData.pid, response, function(err, setPostFields){
+        if (err) {
+          return winston.info(err + 'ON setPostField');
+        }
+        else {
+          winston.info(setPostFields);
+        }
+      });
     }
   });
 }
