@@ -2,7 +2,7 @@
 
 //  Requirements
 var winston = module.parent.require('winston');
-var watsonDev = require('watson-developer-cloud');
+var watsonDev = module.parent.require('watson-developer-cloud');
 
 //  Methods
 var Watson = {};
@@ -19,7 +19,7 @@ Watson.response = function(postData) {
 
   var params = {
     workspace_id: 'a05393b7-d022-4bed-ba76-012042930893',
-    input: {'text': 'hahaha'},
+    input: {'text': postData.content},
     context: context
   };
 
