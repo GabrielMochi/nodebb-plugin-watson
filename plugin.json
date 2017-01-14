@@ -5,6 +5,6 @@
 	"url": "https://github.com/gmochi56/nodebb-plugin-watson",
 	"library": "./library.js",
 	"hooks": [
-		{ "hook": "action:post.save", "method": "response" }
+		{ "hook": "filter:post.create", "method": "response" }
 	]
 }
