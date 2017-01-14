@@ -1,9 +1,9 @@
 'use strict';
 
 //  Requirements
-var winston = module.parent.require('winston');
-var watsonDev = module.parent.require('watson-developer-cloud');
-var Posts = require('../../src/posts/create');
+var Topics = require.main.require('./src/topics'),
+    winston = module.parent.require('winston'),
+    watsonDev = require('watson-developer-cloud');
 
 //  Methods
 var Watson = {};
@@ -25,11 +25,23 @@ Watson.response = function(postData) {
   };
 
   conversation.message(params, function(err, response) {
-    if (err)
-      return winston.info(err);
+    if (err) {
+      return winston.error('[Watson] encountered a problem on the coginition of the recieve message:', err.message);
+    }
     else {
-      winston.info(JSON.stringify(response, null, 2));
-      Posts(postData);
+      var payload = {
+        tid: postData.tid,
+        uid: 2,
+        toPid: postData.pid,
+        content: response.output.text[0],
+        timestamp: Date.now()
+      };
+
+      Topics.reply(payload, function(err) {
+        if (err) {
+          return winston.error('[Watson] encountered a problem while send the response/reply', err.message);
+        }
+      });
     }
   });
 }

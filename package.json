@@ -1,15 +1,70 @@
 {
-  "name": "nodebb-plugin-watson",
-  "version": "2.2.2",
+  "_args": [
+    [
+      {
+        "raw": "nodebb-plugin-watson@^2.2.1",
+        "scope": null,
+        "escapedName": "nodebb-plugin-watson",
+        "name": "nodebb-plugin-watson",
+        "rawSpec": "^2.2.1",
+        "spec": ">=2.2.1 <3.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\Gabriel\\Desktop\\NodeBB"
+    ]
+  ],
+  "_from": "nodebb-plugin-watson@>=2.2.1 <3.0.0",
+  "_id": "nodebb-plugin-watson@2.2.2",
+  "_inCache": true,
+  "_location": "/nodebb-plugin-watson",
+  "_nodeVersion": "4.2.4",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/nodebb-plugin-watson-2.2.2.tgz_1484358195537_0.2419603255111724"
+  },
+  "_npmUser": {
+    "name": "flipped",
+    "email": "davimcouto@segredodaraposa.com.br"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nodebb-plugin-watson@^2.2.1",
+    "scope": null,
+    "escapedName": "nodebb-plugin-watson",
+    "name": "nodebb-plugin-watson",
+    "rawSpec": "^2.2.1",
+    "spec": ">=2.2.1 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nodebb-plugin-watson/-/nodebb-plugin-watson-2.2.2.tgz",
+  "_shasum": "a42886dbcdb6afb60615b43d667511c159366ae9",
+  "_shrinkwrap": null,
+  "_spec": "nodebb-plugin-watson@^2.2.1",
+  "_where": "C:\\Users\\Gabriel\\Desktop\\NodeBB",
+  "author": {
+    "name": "Gabriel Mochi Ribeiro",
+    "email": "gmochi56@icloud.com"
+  },
+  "bugs": {
+    "url": "https://github.com/gmochi56/nodebb-plugin-watson/issues"
+  },
+  "dependencies": {
+    "watson-developer-cloud": "^2.14.6"
+  },
   "description": "NodeBB Plugin that allows users to get response from a virtual assistant using Watson (IBM)",
-  "main": "library.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "a42886dbcdb6afb60615b43d667511c159366ae9",
+    "tarball": "https://registry.npmjs.org/nodebb-plugin-watson/-/nodebb-plugin-watson-2.2.2.tgz"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gmochi56/nodebb-plugin-watson"
-  },
+  "gitHead": "9bdfadcc008d8dd591ccb55850ec2ce0ec2264f3",
+  "homepage": "https://github.com/gmochi56/nodebb-plugin-watson#readme",
   "keywords": [
     "nodebb",
     "plugin",
@@ -19,34 +74,26 @@
     "assistant",
     "response"
   ],
-  "author": {
-    "name": "Gabriel Mochi Ribeiro",
-    "email": "gmochi56@icloud.com"
-  },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gmochi56/nodebb-plugin-watson/issues"
-  },
+  "main": "library.js",
+  "maintainers": [
+    {
+      "name": "flipped",
+      "email": "davimcouto@segredodaraposa.com.br"
+    }
+  ],
+  "name": "nodebb-plugin-watson",
   "nbbpm": {
     "compatibility": "^1.1.0"
   },
-  "homepage": "https://github.com/gmochi56/nodebb-plugin-watson#readme",
-  "_id": "nodebb-plugin-watson@1.0.0",
-  "_from": "nodebb-plugin-mentions@1.0.0",
-  "_npmVersion": "2.14.12",
-  "_nodeVersion": "4.2.4",
-  "maintainers": [
-    {
-      "name": "Gabriel Mochi Ribeiro",
-      "email": "gmochi56@icloud.com"
-    },
-    {
-      "name": "Davi Moraes Couto",
-      "email": "davicouto92@gmail.com"
-    }
-  ],
+  "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
-  "dependencies": {
-    "watson-developer-cloud": "^2.14.4"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmochi56/nodebb-plugin-watson.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.2.2"
 }
