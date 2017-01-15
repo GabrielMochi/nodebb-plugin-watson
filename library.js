@@ -1,13 +1,51 @@
+/*
+  By Gabriel Mochi Ribeiro <gmochi56@icloud.com>,
+     Davi Moraes Couto <davimcouto@segredodaraposa.com.br>
+*/
+
 'use strict';
 
 //  Requirements
-var Topics = require.main.require('./src/topics'),
+var User = require.main.require('./src/user'),
+    Topics = require.main.require('./src/topics'),
     winston = module.parent.require('winston'),
     watsonDev = require('watson-developer-cloud');
+
+// Global variables
+var userSearch = {
+    query: 'Watson', //!!!This query value will be the same in the username if it haven't been created before!!!
+    searchBy: 'username'
+};
 
 //  Methods
 var Watson = {};
 
+// This method will be called even the app load
+Watson.init = function() {
+  // Search if the bot that you named really exists, if not, will be created a user to serve as a bot
+  User.search(userSearch, function(err, search) {
+    if (err) {
+      return winston.error('[Watson] encountered a problem while verify if the user exists', err.message);
+    }
+    else {
+      if (search.matchCount === 0) {
+        var userSettings = {
+          username: userSearch.query,
+          email: 'gmochi56@gmail.com', // Here you can change the e-mail as you want
+          password: 'InspironDell' // Here you can change the password as you want
+        };
+
+        User.create(userSettings, function(err, uid) {
+          if (err) {
+            return winston.error('[Watson] encountered a problem while create the user', err.message);
+          }
+        });
+      }
+    }
+  });
+};
+
+// This method will be called even an user makes a new post or reply
 Watson.response = function(postData) {
   var conversation = watsonDev.conversation({
     username: 'c9d9cc99-b3e5-44f5-a234-ccae1578e8ae',
@@ -24,26 +62,42 @@ Watson.response = function(postData) {
     context: context
   };
 
+  // Call the Watson Conversation service to give an response 
   conversation.message(params, function(err, response) {
     if (err) {
-      return winston.error('[Watson] encountered a problem on the coginition of the recieve message:', err.message);
+      return winston.error('[Watson] encountered a problem on the coginition of the recieved message: ', err.message);
     }
     else {
-      var payload = {
-        tid: postData.tid,
-        uid: 2,
-        toPid: postData.pid,
-        content: response.output.text[0],
-        timestamp: Date.now()
-      };
-
-      Topics.reply(payload, function(err) {
+      // Search if the bot was created, if not, the service won't be able to respond
+      User.search(userSearch, function(err, search) {
         if (err) {
-          return winston.error('[Watson] encountered a problem while send the response/reply', err.message);
+          return winston.error('[Watson] encountered a problem while verify if the user exists: ', err.message);
+        }
+        else {
+          // If a user to serve as bot was found, let's response it
+          if (search.matchCount > 0) {
+            var payload = {
+              tid: postData.tid,
+              uid: search.users[0].uid,
+              toPid: postData.pid,
+              content: response.output.text[0],
+              timestamp: Date.now()
+            };
+
+            // Reply the User's topic with the Conversation service response
+            Topics.reply(payload, function(err) {
+              if (err) {
+                return winston.error('[Watson] encountered a problem while send the response/reply: ', err.message);
+              }
+            });
+          }
+          else {
+            return winston.error('[Watson] encountered a problem while try to find a user as a bot: ', 'No user found');
+          }
         }
       });
     }
   });
-}
+};
 
 module.exports = Watson;
