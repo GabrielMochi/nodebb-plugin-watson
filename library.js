@@ -75,7 +75,7 @@ Watson.response = function(postData) {
         }
         else {
           // If a user to serve as bot was found, let's response it
-          if (search.matchCount > 0) {
+          if (search.matchCount > 0 && postData.uid != search.users[0].uid) {
             var payload = {
               tid: postData.tid,
               uid: search.users[0].uid,
