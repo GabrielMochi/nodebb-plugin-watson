@@ -91,9 +91,6 @@ Watson.response = function(postData) {
               }
             });
           }
-          else {
-            return winston.error('[Watson] encountered a problem while try to find a user as a bot: ', 'No user found');
-          }
         }
       });
     }
