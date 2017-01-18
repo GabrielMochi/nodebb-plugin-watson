@@ -1,92 +1,16 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "nodebb-plugin-watson@^2.2.1",
-        "scope": null,
-        "escapedName": "nodebb-plugin-watson",
-        "name": "nodebb-plugin-watson",
-        "rawSpec": "^2.2.1",
-        "spec": ">=2.2.1 <3.0.0",
-        "type": "range"
-      },
-      "C:\\Users\\Gabriel\\Desktop\\NodeBB"
-    ],
-    [
-      {
-        "raw": "nodebb-plugin-watson@^2.2.2",
-        "scope": null,
-        "escapedName": "nodebb-plugin-watson",
-        "name": "nodebb-plugin-watson",
-        "rawSpec": "^2.2.2",
-        "spec": ">=2.2.2 <3.0.0",
-        "type": "range"
-      },
-      "C:\\Users\\Gabriel\\Desktop\\NodeBB"
-    ]
-  ],
-  "_from": "nodebb-plugin-watson@^2.2.2",
-  "_id": "nodebb-plugin-watson@2.3.0",
-  "_inCache": true,
-  "_location": "/nodebb-plugin-watson",
-  "_nodeVersion": "6.9.2",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/nodebb-plugin-watson-2.3.0.tgz_1484428194301_0.8905478867236525"
+  "name": "nodebb-plugin-watson",
+  "version": "2.4.3",
+  "description": "NodeBB Plugin that allows users to get response from a virtual assistant using Watson (IBM)",
+  "homepage": "https://github.com/gmochi56/nodebb-plugin-watson#readme",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "_npmUser": {
-    "name": "flipped",
-    "email": "davimcouto@segredodaraposa.com.br"
-  },
-  "_npmVersion": "3.10.9",
-  "_phantomChildren": {
-    "cookie": "0.3.1",
-    "csv-stringify": "1.0.4",
-    "extend": "3.0.0",
-    "isstream": "0.1.2",
-    "lodash": "4.17.4",
-    "object.omit": "2.0.1",
-    "object.pick": "1.2.0",
-    "request": "2.79.0",
-    "solr-client": "0.6.0",
-    "string": "3.3.3",
-    "vcap_services": "0.2.0",
-    "websocket": "1.0.24"
-  },
-  "_requested": {
-    "raw": "nodebb-plugin-watson@^2.2.2",
-    "scope": null,
-    "escapedName": "nodebb-plugin-watson",
-    "name": "nodebb-plugin-watson",
-    "rawSpec": "^2.2.2",
-    "spec": ">=2.2.2 <3.0.0",
-    "type": "range"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/nodebb-plugin-watson/-/nodebb-plugin-watson-2.3.0.tgz",
-  "_shasum": "f036742703f83d924a9c9ed869a14d3ea6cc5982",
-  "_shrinkwrap": null,
-  "_spec": "nodebb-plugin-watson@^2.2.2",
-  "_where": "C:\\Users\\Gabriel\\Desktop\\NodeBB",
   "author": {
     "name": "Gabriel Mochi Ribeiro",
     "email": "gmochi56@icloud.com"
   },
-  "bugs": {
-    "url": "https://github.com/gmochi56/nodebb-plugin-watson/issues"
-  },
-  "description": "NodeBB Plugin that allows users to get response from a virtual assistant using Watson (IBM)",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "shasum": "f036742703f83d924a9c9ed869a14d3ea6cc5982",
-    "tarball": "https://registry.npmjs.org/nodebb-plugin-watson/-/nodebb-plugin-watson-2.3.0.tgz"
-  },
-  "gitHead": "9bdfadcc008d8dd591ccb55850ec2ce0ec2264f3",
-  "homepage": "https://github.com/gmochi56/nodebb-plugin-watson#readme",
   "keywords": [
     "nodebb",
     "plugin",
@@ -96,26 +20,16 @@
     "assistant",
     "response"
   ],
-  "license": "MIT",
-  "main": "library.js",
-  "maintainers": [
-    {
-      "name": "flipped",
-      "email": "davimcouto@segredodaraposa.com.br"
-    }
-  ],
-  "name": "nodebb-plugin-watson",
-  "nbbpm": {
-    "compatibility": "^1.1.0"
-  },
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gmochi56/nodebb-plugin-watson.git"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bugs": {
+    "url": "https://github.com/gmochi56/nodebb-plugin-watson/issues"
   },
-  "version": "2.4.4"
+  "license": "MIT",
+  "nbbpm": {
+    "compatibility": "^1.1.0"
+  },
+  "readme": "ERROR: No README data found!"
 }
