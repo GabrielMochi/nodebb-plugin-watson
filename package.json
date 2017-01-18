@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-watson",
-  "version": "2.4.4",
+  "version": "2.5.0",
   "description": "NodeBB Plugin that allows users to get response from a virtual assistant using Watson (IBM)",
   "homepage": "https://github.com/gmochi56/nodebb-plugin-watson#readme",
   "main": "library.js",
