@@ -7,6 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "watson-developer-cloud": "^2.15.2"
+  },
   "author": {
     "name": "Gabriel Mochi Ribeiro",
     "email": "gmochi56@icloud.com"
