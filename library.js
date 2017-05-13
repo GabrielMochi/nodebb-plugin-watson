@@ -1,7 +1,7 @@
-/*
-  By Gabriel Mochi Ribeiro <gmochi56@icloud.com>,
-     Davi Moraes Couto <davimcouto@segredodaraposa.com.br>
-*/
+/**
+  * @author Gabriel Mochi Ribeiro <gmochi56@icloud.com>,
+  * @author Moraes Couto <davimcouto@segredodaraposa.com.br>
+  */
 
 'use strict';
 
@@ -31,8 +31,8 @@ Watson.init = function() {
       if (search.matchCount === 0) {
         var userSettings = {
           username: userSearch.query,
-          email: 'gmochi56@gmail.com', // Here you can change the e-mail as you want
-          password: 'InspironDell' // Here you can change the password as you want
+          email: 'email', // Here you can change the e-mail as you want
+          password: 'shhhhh!!!!' // Here you can change the password as you want
         };
 
         User.create(userSettings, function(err, uid) {
@@ -48,8 +48,8 @@ Watson.init = function() {
 // This method will be called even an user makes a new post or reply
 Watson.response = function(postData) {
   var conversation = watsonDev.conversation({
-    username: 'c9d9cc99-b3e5-44f5-a234-ccae1578e8ae',
-    password: 'xUtHqarwWpUk',
+    username: 'xxxxxxxxxxxxxxxxxxxxx',
+    password: 'secrete.',
     version: 'v1',
     version_date: '2016-09-20'
   });
