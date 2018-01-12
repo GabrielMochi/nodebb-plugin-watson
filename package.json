@@ -10,10 +10,16 @@
   "dependencies": {
     "watson-developer-cloud": "^2.15.2"
   },
-  "author": {
-    "name": "Gabriel Mochi Ribeiro",
-    "email": "gmochi56@icloud.com"
-  },
+  "authors": [
+    {
+      "name": "Gabriel Mochi Ribeiro",
+      "email": "gmochi56@icloud.com"
+    },
+    {
+      "name": "Davi Moraes Couto",
+      "email": "davimcouto@segredodaraposa.com.br"
+    }
+  ],
   "keywords": [
     "nodebb",
     "plugin",
